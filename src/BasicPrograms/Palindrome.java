@@ -15,10 +15,40 @@ package BasicPrograms;
 
  */
 
+import java.util.Scanner;
+
 public class Palindrome {
 
     public static boolean isPalindrome(String original) {
+
+        if (original.equals(reverse(original))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static String reverse(String original) {
         String reversed = "";
-        for (int i)
+
+        for (int i = (original.length() - 1); i >= 0; i--) {
+            reversed += original.charAt(i);
+        }
+
+        return reversed;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the string or number you want to check: ");
+        String original = scanner.nextLine();
+
+        if (isPalindrome(original)) {
+            System.out.println("Entered string or number is palindrome.");
+        } else {
+            System.out.println("Entered string or number is not palindrome.");
+        }
     }
 }
