@@ -19,10 +19,20 @@ import java.util.Scanner;
 
 public class Palindrome {
 
+    /**
+     * This method checks if entered string is palindrome or not.
+     * @param original - string to check
+     * @return - true if string is palindrome or false if string is not palindrome.
+     */
     public static boolean isPalindrome(String original) {
         return original.equals(reverse(original));
     }
 
+    /**
+     * This method reverses entered string/
+     * @param original - string to reverse
+     * @return - reversed string
+     */
     public static String reverse(String original) {
         String reversed = "";
 
