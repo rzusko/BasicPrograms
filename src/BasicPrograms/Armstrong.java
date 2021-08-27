@@ -58,17 +58,41 @@ public class Armstrong {
         return false;   // number is not positive.
     }
 
+    /**
+     * This method prints every Armstrong number between two numbers.
+     * @param start
+     * @param end
+     */
+    public static void printArmstrong(int start, int end) {
+        for (int i = start; i <= end; i++) {
+            if (isArmstrong(i)) {
+                System.out.println(i);
+            }
+        }
+    }
+
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter number to check if it is Armstrong number: ");
-        int input = scanner.nextInt();
-        scanner.close();
+//        System.out.print("Enter number to check if it is Armstrong number: ");
+//        int input = scanner.nextInt();
+//
+//        if (isArmstrong(input)) {
+//            System.out.println(input + " is Armstrong number.");
+//        } else {
+//            System.out.println(input + " is not Armstrong number.");
+//        }
 
-        if (isArmstrong(input)) {
-            System.out.println(input + " is Armstrong number.");
-        } else {
-            System.out.println(input + " is not Armstrong number.");
-        }
+        System.out.print("Enter start number: ");
+        int start = scanner.nextInt();
+        scanner.nextLine();
+        System.out.print("Enter end number: ");
+        int end = scanner.nextInt();
+        scanner.nextLine();
+
+        printArmstrong(start, end);
+
+        scanner.close();
     }
 }
