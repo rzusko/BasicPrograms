@@ -22,6 +22,8 @@ package BasicPrograms;
     32164049651.
  */
 
+import java.util.Scanner;
+
 public class Armstrong {
 
     /**
@@ -45,7 +47,7 @@ public class Armstrong {
             temp = input;
 
             while (temp > 0) {
-                sum = sum + ((temp % 10)^digit);
+                sum = sum + (int) Math.pow((temp % 10), digit);
                 temp /= 10;
             }
 
@@ -54,5 +56,19 @@ public class Armstrong {
         }
 
         return false;   // number is not positive.
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter number to check if it is Armstrong number: ");
+        int input = scanner.nextInt();
+        scanner.close();
+
+        if (isArmstrong(input)) {
+            System.out.println(input + " is Armstrong number.");
+        } else {
+            System.out.println(input + " is not Armstrong number.");
+        }
     }
 }
