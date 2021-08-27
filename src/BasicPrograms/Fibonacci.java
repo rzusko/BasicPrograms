@@ -19,14 +19,17 @@ public class Fibonacci {
         int count = scanner.nextInt();
         scanner.close();
 
-        System.out.print(n1 + ", " + n2);
-        printFibonacci(count - 2);
+        printFibonacci(count);
     }
 
+    /**
+     * This method prints Fibonacci series of entered length.
+     * @param count - lenght of Fibonacci series
+     */
     public static void printFibonacci(int count) {
         if (count > 0) {
             n3 = n1 + n2;
-            System.out.print(", " + n3);
+            System.out.print(n1 + " ");
             n1 = n2;
             n2 = n3;
             printFibonacci(count - 1);

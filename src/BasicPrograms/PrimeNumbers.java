@@ -6,8 +6,14 @@ package BasicPrograms;
     For example 2, 3, 5, 7, 11, 13, 17.... are the prime numbers.
  */
 
+
 public class PrimeNumbers {
 
+    /**
+     * This method checks if the number is prime number.
+     * @param number - number to be checked
+     * @return true if number is prime or false if number is not prime
+     */
     public static boolean isPrime(int number) {
 
         boolean isPrime = true;
@@ -26,6 +32,12 @@ public class PrimeNumbers {
         return isPrime;
     }
 
+
+    /**
+     * This method prints every prime number between two numbers.
+     * @param start
+     * @param end
+     */
     public static void printPrimes(int start, int end) {
         for (int i = start; i <= end; i++) {
             if (isPrime(i)) {
@@ -34,6 +46,10 @@ public class PrimeNumbers {
         }
     }
 
+    /**
+     * This method prints every prime number between 0 and entered number.
+     * @param end
+     */
     public static void printPrimes(int end) {
         printPrimes(0, end);
     }
