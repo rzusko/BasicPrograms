@@ -20,12 +20,7 @@ import java.util.Scanner;
 public class Palindrome {
 
     public static boolean isPalindrome(String original) {
-
-        if (original.equals(reverse(original))) {
-            return true;
-        } else {
-            return false;
-        }
+        return original.equals(reverse(original));
     }
 
     public static String reverse(String original) {
