@@ -15,14 +15,14 @@ import java.util.Scanner;
 public class Factorial {
 
     /**
-     * This method calculates factorial.
+     * This method calculates factorial using loop.
      * @param n
      * @return - factorial of entered number. If entered number is less than 1, then returns -1.
      */
     public static int factorial(int n) {
         int factor;
 
-        if (n >= 1) {
+        if (n >= 0) {
             factor = 1;
 
             for (int i = 1; i <= n; i++) {
@@ -35,6 +35,22 @@ public class Factorial {
         return factor;
     }
 
+    /**
+     * This method calculates factorial using recursion.
+     * @param n
+     * @return - factorial of entered number. If entered number is less than, then returns -1.
+     */
+    public static int factorialWithRecursion(int n) {
+
+        if (n >= 1) {
+            return n * factorialWithRecursion(n-1);
+        } else if (n == 0) {
+            return 1;
+        } else {
+            return -1;
+        }
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -43,6 +59,7 @@ public class Factorial {
         scanner.close();
 
         System.out.println(n + "! = " + factorial(n));
+        System.out.println(n + "! = " + factorialWithRecursion(n));
     }
 
 }
