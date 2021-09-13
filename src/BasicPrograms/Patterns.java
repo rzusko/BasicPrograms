@@ -79,13 +79,23 @@ public class Patterns {
         }
     }
 
+    public static void downwardTriangleStarPattern(int size) {
+        for (int i = size; i > 0; i--) {
+            for (int j = i; j > 0; j--) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
 //        rightTriangleStarPattern(5);
 //        mirroredRightTriangleStarPattern(5);
 //        leftTriangleStarPattern(5);
 //        mirroredLeftTriangleStarPattern(5);
 //        pyramidStarPattern(6);
-        diamondShapePattern(8);
+//        diamondShapePattern(8);
+        downwardTriangleStarPattern(7);
     }
 
 }
