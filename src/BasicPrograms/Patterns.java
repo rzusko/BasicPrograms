@@ -88,6 +88,18 @@ public class Patterns {
         }
     }
 
+    public static void reversePyramidStarPattern(int size) {
+        for (int i =  size; i > 0; i--) {
+            for (int j = 0; j < (size - i); j++) {
+                System.out.print(" ");
+            }
+            for (int k = i; k > 0; k--) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
 //        rightTriangleStarPattern(5);
 //        mirroredRightTriangleStarPattern(5);
@@ -95,7 +107,8 @@ public class Patterns {
 //        mirroredLeftTriangleStarPattern(5);
 //        pyramidStarPattern(6);
 //        diamondShapePattern(8);
-        downwardTriangleStarPattern(7);
+//        downwardTriangleStarPattern(7);
+        reversePyramidStarPattern(8);
     }
 
 }
