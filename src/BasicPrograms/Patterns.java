@@ -100,6 +100,21 @@ public class Patterns {
         }
     }
 
+    public static void rightPascalsTriangle(int size) {
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        for (int i = (size - 1); i > 0; i--) {
+            for (int j = i; j > 0; j--) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
 //        rightTriangleStarPattern(5);
 //        mirroredRightTriangleStarPattern(5);
@@ -108,7 +123,8 @@ public class Patterns {
 //        pyramidStarPattern(6);
 //        diamondShapePattern(8);
 //        downwardTriangleStarPattern(7);
-        reversePyramidStarPattern(8);
+//        reversePyramidStarPattern(8);
+        rightPascalsTriangle(8);
     }
 
 }
