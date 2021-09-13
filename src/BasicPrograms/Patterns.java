@@ -136,6 +136,27 @@ public class Patterns {
         }
     }
 
+    public static void sandglassStarPattern(int size) {
+        for (int i = size; i > 0; i--) {
+            for (int j = 0; j < (size - i); j++) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k < i; k++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        for (int i = 1; i <= size; i++) {
+            for (int j = 0; j < (size - i); j++) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k < i; k++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
 //        rightTriangleStarPattern(5);
 //        mirroredRightTriangleStarPattern(5);
@@ -146,7 +167,8 @@ public class Patterns {
 //        downwardTriangleStarPattern(7);
 //        reversePyramidStarPattern(8);
 //        rightPascalsTriangle(8);
-        leftPascalsTriangle(8);
+//        leftPascalsTriangle(8);
+        sandglassStarPattern(8);
     }
 
 }
