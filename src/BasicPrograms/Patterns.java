@@ -203,6 +203,37 @@ public class Patterns {
         }
     }
 
+    public static void diamondStarPattern(int size) {
+        for (int i = 1; i <= size; i++) {
+            for (int j = 1; j <= (size - i); j++) {
+                System.out.print(" ");
+            }
+
+            for (int k = 1; k < (2 * i); k++) {
+                if ((k == 1) || (k == ((2 * i) -1))) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+
+        for (int i = (size - 1); i > 0; i--) {
+            for (int j = 1; j <= (size - i); j++) {
+                System.out.print(" ");
+            }
+
+            for (int k = 1; k < (2 * i); k++) {
+                if ((k == 1) || (k == ((2 * i) - 1))) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
 
     public static void main(String[] args) {
 //        rightTriangleStarPattern(5);
@@ -217,7 +248,8 @@ public class Patterns {
 //        leftPascalsTriangle(8);
 //        sandglassStarPattern(8);
 //        triangleStarPattern(8);
-        downTriangleStarPattern(8);
+//        downTriangleStarPattern(8);
+        diamondStarPattern(5);
     }
 
 }
