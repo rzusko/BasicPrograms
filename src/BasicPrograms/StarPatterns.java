@@ -2,6 +2,16 @@ package BasicPrograms;
 
 public class StarPatterns {
 
+    /*
+        Output for size = 5:
+
+        *
+        **
+        ***
+        ****
+        *****
+
+     */
     public static void rightTriangleStarPattern(int size) {
         for (int i = 1; i <= size; i++) {
             for (int j = 1; j <= i; j++) {
@@ -11,15 +21,35 @@ public class StarPatterns {
         }
     }
 
+    /*
+        Output for size = 5:
+
+        *****
+        ****
+        ***
+        **
+        *
+
+     */
     public static void mirroredRightTriangleStarPattern(int size) {
         for (int i = size; i >= 1; i--) {
-            for (int j = 0; j <= i; j++) {
+            for (int j = 0; j < i; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
     }
 
+    /*
+        Output for size = 5:
+
+            *
+           **
+          ***
+         ****
+        *****
+
+     */
     public static void leftTriangleStarPattern(int size) {
         for (int i = 1; i <= size; i++) {
             for (int j = size; j > i; j--) {
@@ -32,6 +62,16 @@ public class StarPatterns {
         }
     }
 
+    /*
+        Output for size = 5:
+
+        *****
+         ****
+          ***
+           **
+            *
+
+     */
     public static void mirroredLeftTriangleStarPattern(int size) {
         for (int i = size; i >= 1; i--) {
             for (int j = size; j > i; j--) {
@@ -44,6 +84,16 @@ public class StarPatterns {
         }
     }
 
+    /*
+        Output for size = 5:
+
+            *
+           * *
+          * * *
+         * * * *
+        * * * * *
+
+     */
     public static void pyramidStarPattern(int size) {
         for (int i = 1; i <= size; i++) {
             for (int j = 1; j <= size - i; j++) {
@@ -57,6 +107,20 @@ public class StarPatterns {
         }
     }
 
+    /*
+        Output for size = 5:
+
+            *
+           ***
+          *****
+         *******
+        *********
+         *******
+          *****
+           ***
+            *
+
+     */
     public static void diamondShapePattern(int size) {
         for (int i = 1; i <= size; i++) {
             for (int j = 1; j <= (size - i); j++) {
@@ -79,6 +143,16 @@ public class StarPatterns {
         }
     }
 
+    /*
+        Output for size = 5:
+
+        *****
+        ****
+        ***
+        **
+        *
+
+     */
     public static void downwardTriangleStarPattern(int size) {
         for (int i = size; i > 0; i--) {
             for (int j = i; j > 0; j--) {
@@ -88,6 +162,16 @@ public class StarPatterns {
         }
     }
 
+    /*
+        Output for size = 5:
+
+        * * * * *
+         * * * *
+          * * *
+           * *
+            *
+
+     */
     public static void reversePyramidStarPattern(int size) {
         for (int i =  size; i > 0; i--) {
             for (int j = 0; j < (size - i); j++) {
@@ -100,6 +184,20 @@ public class StarPatterns {
         }
     }
 
+    /*
+        Output for size = 5:
+
+        *
+        * *
+        * * *
+        * * * *
+        * * * * *
+        * * * *
+        * * *
+        * *
+        *
+
+     */
     public static void rightPascalsTriangle(int size) {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j <= i; j++) {
@@ -115,6 +213,20 @@ public class StarPatterns {
         }
     }
 
+    /*
+        Output for size = 5:
+
+                *
+              * *
+            * * *
+          * * * *
+        * * * * *
+          * * * *
+            * * *
+              * *
+                *
+
+     */
     public static void leftPascalsTriangle(int size) {
         for (int i = 1; i <= size ; i++) {
             for (int j = 0; j < (size - i); j++) {
@@ -136,6 +248,21 @@ public class StarPatterns {
         }
     }
 
+    /*
+        Output for size = 5:
+
+        * * * * *
+         * * * *
+          * * *
+           * *
+            *
+            *
+           * *
+          * * *
+         * * * *
+        * * * * *
+
+     */
     public static void sandglassStarPattern(int size) {
         for (int i = size; i > 0; i--) {
             for (int j = 0; j < (size - i); j++) {
@@ -157,6 +284,16 @@ public class StarPatterns {
         }
     }
 
+    /*
+        Output for size = 5:
+
+             *
+            * *
+           *   *
+          *     *
+         *********
+
+     */
     public static void triangleStarPattern(int size) {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < (size - i); j++) {
@@ -179,6 +316,15 @@ public class StarPatterns {
         }
     }
 
+    /*
+        Output for size = 5:
+
+        *********
+         *     *
+          *   *
+           * *
+            *
+     */
     public static void downTriangleStarPattern(int size) {
         for (int i = size; i > 0; i--) {
             for (int j = 0; j < (size - i); j++) {
@@ -203,6 +349,20 @@ public class StarPatterns {
         }
     }
 
+    /*
+        Output for size = 5:
+
+             *
+            * *
+           *   *
+          *     *
+         *       *
+          *     *
+           *   *
+            * *
+             *
+
+     */
     public static void diamondStarPattern(int size) {
         for (int i = 1; i <= size; i++) {
             for (int j = 1; j <= (size - i); j++) {
@@ -249,7 +409,7 @@ public class StarPatterns {
 //        sandglassStarPattern(8);
 //        triangleStarPattern(8);
 //        downTriangleStarPattern(8);
-//        diamondStarPattern(5);
+        diamondStarPattern(5);
     }
 
 }
