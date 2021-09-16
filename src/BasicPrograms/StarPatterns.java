@@ -1,6 +1,6 @@
 package BasicPrograms;
 
-public class Patterns {
+public class StarPatterns {
 
     public static void rightTriangleStarPattern(int size) {
         for (int i = 1; i <= size; i++) {
@@ -249,7 +249,7 @@ public class Patterns {
 //        sandglassStarPattern(8);
 //        triangleStarPattern(8);
 //        downTriangleStarPattern(8);
-        diamondStarPattern(5);
+//        diamondStarPattern(5);
     }
 
 }
