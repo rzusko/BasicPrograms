@@ -179,6 +179,29 @@ public class Patterns {
         }
     }
 
+    public static void downTriangleStarPattern(int size) {
+        for (int i = size; i > 0; i--) {
+            for (int j = 0; j < (size - i); j++) {
+                System.out.print(" ");
+            }
+
+            if (i == size) {
+                for (int k = 0; k < ((2 * i) - 1); k++) {
+                    System.out.print("*");
+                }
+            } else if (i == 1) {
+                System.out.print("*");
+            } else {
+                System.out.print("*");
+                for (int k = 0; k < ((2 * (i - 1)) - 1); k++) {
+                    System.out.print(" ");
+                }
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
 
 
     public static void main(String[] args) {
@@ -194,6 +217,7 @@ public class Patterns {
 //        leftPascalsTriangle(8);
 //        sandglassStarPattern(8);
 //        triangleStarPattern(8);
+        downTriangleStarPattern(8);
     }
 
 }
