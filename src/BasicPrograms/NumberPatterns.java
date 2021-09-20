@@ -155,12 +155,51 @@ public class NumberPatterns {
         }
     }
 
+    /*
+        Output for size = 5:
+
+        1
+        2 1
+        3 2 1
+        4 3 2 1
+        5 4 3 2 1
+
+     */
+    public static void pattern7(int size) {
+        for (int i = 1; i <= size; i++) {
+            for (int j = i; j >= 1; j--) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    /*
+        Output for size = 5:
+
+        10101
+        01010
+        10101
+        01010
+        10101
+     */
+    public static void pattern8(int size) {
+        for (int i = 1; i <= size; i++) {
+            for (int j = 0; j < size; j++) {
+                System.out.print((i + j) % 2);
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
 //        pattern1(5);
 //        pattern2(5);
 //        pattern3(13);
 //        pattern4(4);
 //        pattern5(358);
-        pattern6(5);
+//        pattern6(325);
+//        pattern7(5);
+        pattern8(8);
     }
 }
