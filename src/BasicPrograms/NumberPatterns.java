@@ -137,11 +137,30 @@ public class NumberPatterns {
 
     }
 
+    /*
+        Output for size = 5
+
+        5
+        5 4
+        5 4 3
+        5 4 3 2
+        5 4 3 2 1
+     */
+    public static void pattern6(int size) {
+        for (int i = size; i > 0; i--) {
+            for (int j = size; j >= i; j--) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
 //        pattern1(5);
 //        pattern2(5);
 //        pattern3(13);
 //        pattern4(4);
-        pattern5(358);
+//        pattern5(358);
+        pattern6(5);
     }
 }
