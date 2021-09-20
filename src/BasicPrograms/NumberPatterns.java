@@ -57,11 +57,59 @@ public class NumberPatterns {
     public static void pattern3(int size) {
         for (int i = 0; i < size; i++) {
             System.out.printf("%" + ((size - i) * 2) + "s", "");
+
             int number = 1;
             for (int j = 0; j <= i; j++) {
                 System.out.printf("%4d", number);
                 number = number * (i - j) / (j + 1);
             }
+
+            System.out.println();
+        }
+    }
+
+    /*
+        Output for size = 4
+             1
+            212
+           32123
+          4321234
+           32123
+            212
+             1
+
+        !!! Works only for number 1 - 9 !!!
+     */
+    public static void pattern4(int size) {
+        for (int i = 1; i < size; i++) {
+            for (int j = 0; j < (size - i); j++) {
+                System.out.print(" ");
+            }
+
+            for (int k = i; k >= 1; k--) {
+                System.out.print(k);
+            }
+
+            for (int k = 2; k <= i; k++) {
+                System.out.print(k);
+            }
+
+            System.out.println();
+        }
+
+        for (int i = size; i >= 1; i--) {
+            for (int j = 0; j < (size - i); j++) {
+                System.out.print(" ");
+            }
+
+            for (int k = i; k >= 1; k--) {
+                System.out.print(k);
+            }
+
+            for (int k = 2; k <= i; k++) {
+                System.out.print(k);
+            }
+
             System.out.println();
         }
     }
@@ -69,6 +117,7 @@ public class NumberPatterns {
     public static void main(String[] args) {
 //        pattern1(5);
 //        pattern2(5);
-        pattern3(8);
+//        pattern3(8);
+        pattern4(4);
     }
 }
