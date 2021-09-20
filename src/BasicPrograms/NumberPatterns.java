@@ -55,11 +55,20 @@ public class NumberPatterns {
             1   7  21  35  35  21   7   1
      */
     public static void pattern3(int size) {
-
+        for (int i = 0; i < size; i++) {
+            System.out.printf("%" + ((size - i) * 2) + "s", "");
+            int number = 1;
+            for (int j = 0; j <= i; j++) {
+                System.out.printf("%4d", number);
+                number = number * (i - j) / (j + 1);
+            }
+            System.out.println();
+        }
     }
 
     public static void main(String[] args) {
 //        pattern1(5);
-        pattern2(5);
+//        pattern2(5);
+        pattern3(8);
     }
 }
