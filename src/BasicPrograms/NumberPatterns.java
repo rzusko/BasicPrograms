@@ -499,10 +499,10 @@ public class NumberPatterns {
         for (int j = size; j > i; j--) {
             System.out.print(j + " ");
         }
-        for (int k = 1; k < ((2 * i) - 1); k++) {
+        for (int k = 1; k < (2 * i); k++) {
             System.out.print(i + " ");
         }
-        for (int l = i; l <= size; l++) {
+        for (int l = (i + 1); l <= size; l++) {
             System.out.print(l + " ");
         }
         System.out.println();
