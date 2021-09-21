@@ -68,10 +68,32 @@ public class CharacterPatterns {
         }
     }
 
+    /*
+        Output for size = 5:
+
+            A
+           A B
+          A B C
+         A B C D
+        A B C D E
+     */
+    public static void  triangleCharacterPattern(int size) {
+        for (int i = 1; i <= size; i++) {
+            for (int j = size; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k < i; k++) {
+                System.out.print((char) (k + ALPHA) + " ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
 //        rightTriangleAlphabeticPattern(5);
 //        repeatingAlphabetPattern(5);
-        kShapeAlphabetPattern(5);
+//        kShapeAlphabetPattern(5);
+        triangleCharacterPattern(5);
     }
 
 }
