@@ -20,7 +20,26 @@ public class CharacterPatterns {
         }
     }
 
+    /*
+        Output for size = 5:
+
+        A
+        B B
+        C C C
+        D D D D
+        E E E E E
+     */
+    public static void repeatingAlphabetPattern(int size) {
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print((char) (i + 65) + " ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
-        rightTriangleAlphabeticPattern(5);
+//        rightTriangleAlphabeticPattern(5);
+        repeatingAlphabetPattern(5);
     }
 }
