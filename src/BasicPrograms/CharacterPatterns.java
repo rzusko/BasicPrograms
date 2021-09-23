@@ -61,6 +61,24 @@ public class CharacterPatterns {
     }
 
     /*
+    Output for size = 'E':
+
+    A
+    B B
+    C C C
+    D D D D
+    E E E E E
+ */
+    public static void repeatingAlphabetPattern(char size) {
+        for (char i = 'A'; i <= size; i++) {
+            for (char j = 'A'; j <= i; j++) {
+                System.out.print(i + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    /*
         Output for size = 5:
 
         A B C D E
@@ -111,8 +129,8 @@ public class CharacterPatterns {
     }
 
     public static void main(String[] args) {
-        rightTriangleAlphabeticPattern('E');
-//        repeatingAlphabetPattern(5);
+//        rightTriangleAlphabeticPattern('E');
+        repeatingAlphabetPattern('E');
 //        kShapeAlphabetPattern(5);
 //        triangleCharacterPattern(5);
     }
