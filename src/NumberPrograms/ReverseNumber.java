@@ -5,9 +5,9 @@ public class ReverseNumber {
         int reversedNumber = 0;
 
         while (numberToReverse != 0) {
-            int temp = numberToReverse % 10;
+            int remainder = numberToReverse % 10;
             numberToReverse /= 10;
-            reversedNumber = (reversedNumber * 10) + temp;
+            reversedNumber = (reversedNumber * 10) + remainder;
         }
 
         return reversedNumber;
