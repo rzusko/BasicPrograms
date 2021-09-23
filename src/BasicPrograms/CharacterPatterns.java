@@ -157,11 +157,32 @@ public class CharacterPatterns {
         }
     }
 
+    /*
+    Output for size = 'E':
+
+        A
+       A B
+      A B C
+     A B C D
+    A B C D E
+ */
+    public static void  triangleCharacterPattern(char size) {
+        for (char i ='A'; i <= size; i++) {
+            for (char j = size; j >= i; j--) {
+                System.out.print(" ");
+            }
+            for (char k = 'A'; k <= i; k++) {
+                System.out.print(k + " ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
 //        rightTriangleAlphabeticPattern('E');
 //        repeatingAlphabetPattern('E');
-        kShapeAlphabetPattern('E');
-//        triangleCharacterPattern(5);
+//        kShapeAlphabetPattern('E');
+        triangleCharacterPattern('E');
     }
 
 }
