@@ -178,7 +178,7 @@ public class CharacterPatterns {
     }
 
     /*
-        Output for size = '5':
+        Output for size = 5:
 
              A
             B B
@@ -210,12 +210,48 @@ public class CharacterPatterns {
         System.out.println();
     }
 
+    /*
+        Output for size = 'E':
+
+             A
+            B B
+           C   C
+          D     D
+         E       E
+          D     D
+           C   C
+            B B
+             A
+     */
+    public static void diamondCharacterPattern(char size) {
+        for (char i = 'A'; i < size; i++) {
+            diamondCharacterPatternPrint(i, size);
+        }
+        for (char i = size; i >= 'A'; i--) {
+            diamondCharacterPatternPrint(i, size);
+        }
+    }
+
+    private static void diamondCharacterPatternPrint(char i, char size) {
+        int sizeInt = size - ALPHA;
+        int iInt = i - ALPHA;
+        for (int j = 0; j <= (sizeInt + iInt); j++) {
+            if ((j == (sizeInt - iInt)) || (j == (sizeInt + iInt))) {
+                System.out.print(i);
+            } else {
+                System.out.print(" ");
+            }
+        }
+        System.out.println();
+    }
+
+
     public static void main(String[] args) {
 //        rightTriangleAlphabeticPattern('E');
 //        repeatingAlphabetPattern('E');
 //        kShapeAlphabetPattern('E');
 //        triangleCharacterPattern('E');
-        diamondCharacterPattern(5);
+        diamondCharacterPattern('E');
     }
 
 }
