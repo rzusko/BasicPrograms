@@ -22,6 +22,27 @@ public class CharacterPatterns {
     }
 
     /*
+    Output for size = 'E':
+
+    A
+    A B
+    A B C
+    A B C D
+    A B C D E
+
+    !!! Works only for characters 'A' - 'Z'
+ */
+    public static void rightTriangleAlphabeticPattern(char size) {
+        for (char i = 'A'; i <= size; i++) {
+            for (char j = 'A'; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+
+
+    /*
         Output for size = 5:
 
         A
@@ -90,10 +111,10 @@ public class CharacterPatterns {
     }
 
     public static void main(String[] args) {
-//        rightTriangleAlphabeticPattern(5);
+        rightTriangleAlphabeticPattern('E');
 //        repeatingAlphabetPattern(5);
 //        kShapeAlphabetPattern(5);
-        triangleCharacterPattern(5);
+//        triangleCharacterPattern(5);
     }
 
 }
