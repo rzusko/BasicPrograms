@@ -24,8 +24,24 @@ public class Palindrome {
      * @param original - string to check
      * @return - true if string is palindrome or false if string is not palindrome.
      */
+//    public static boolean isPalindrome(String original) {
+//        return original.equals(reverse(original));
+//    }
+
+    // more optimal way of palindrome
     public static boolean isPalindrome(String original) {
-        return original.equals(reverse(original));
+        int lengthOfString = original.length();
+        for (int i = 0; i < (lengthOfString/2); i++) {
+            System.out.println("loop " + i);
+            char charFromLeft = original.charAt(i);
+            char charFromRight = original.charAt((lengthOfString - 1) - i);
+
+            if (charFromLeft != charFromRight) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     /**
@@ -42,6 +58,7 @@ public class Palindrome {
 
         return reversed;
     }
+
 
     public static void main(String[] args) {
 
