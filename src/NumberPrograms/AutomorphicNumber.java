@@ -11,6 +11,7 @@ package NumberPrograms;
 import java.util.Scanner;
 
 public class AutomorphicNumber {
+
     public static boolean isAutomorphic(int number) {
         int square = number * number;
         int temp = number;
